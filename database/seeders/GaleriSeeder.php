@@ -52,7 +52,7 @@ class GaleriSeeder extends Seeder
         ], [
             'id' => 8,
             'nama' => 'Foto 8',
-            'foto' => 'sample-image/foto-8.jpg',
+            'foto' => 'sample-image/foto-2.jpg',
         ], [
             'id' => 9,
             'nama' => 'Foto 9',

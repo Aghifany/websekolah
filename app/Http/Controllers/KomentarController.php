@@ -1,14 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use DB;
-use App\Models\Berita;
-use App\Models\Galeri;
 use App\Models\Komentar;
 use Illuminate\Http\Request;
 
-class BeritaController extends Controller
+class KomentarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,16 +13,7 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $items = Berita::paginate(6);
-        $News = Berita::latest()->get();
-        $galeris = Galeri::latest()->get();
-
-        return view('berita.index', [
-            'items' => $items,
-            'News'  => $News,
-            'galeris'=>$galeris
-            
-        ]);
+        return view('berita.detail');
     }
 
     /**
@@ -36,7 +23,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('berita.detail');
     }
 
     /**
@@ -47,7 +34,15 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Komentar::create([
+            'berita_id'=>request('berita_id'),
+            'name' => request('name'),
+            'email' => request('email'),
+            'komentar' => request('komentar'),
+        ]);
+ 
+        return redirect()->back();
     }
 
     /**
@@ -55,29 +50,13 @@ class BeritaController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-     */ 
-    public function show($id)
+     */
+    public function show($berita_id)
     {
-        $item = Berita::findOrFail($id);
-        // dd($item);
-        
-        $berita_id = $item->id;
-        // dd($berita_id);
-
-        
-
-        $komen = DB::table('komentars')->where('berita_id', '=' ,$berita_id)->get();
-        // dd($komen);
-     
-        // $komen = Komentar::find($id);
-        // dd($komen);
-
-
-        $beritas = Berita::all();
-        return view('berita.detail', [
-            'item' => $item,
-            'beritas'=>$beritas,
-            'komen'=>$komen
+        $komentar = Komentar::find($berita_id);
+        // dd($komentar);
+        return view('berita.detail',[
+            'komen'=>$komentar
         ]);
     }
 

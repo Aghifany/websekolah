@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBeritasTable extends Migration
+class CreateKontaksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateBeritasTable extends Migration
      */
     public function up()
     {
-        Schema::create('beritas', function (Blueprint $table) {
+        Schema::create('kontaks', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('slug');
-            $table->string('foto');
-            $table->text('isi');
+            $table->string('alamat');
+            $table->string('email');
+            $table->string('whatsapp');
+            $table->text('maps');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateBeritasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('beritas');
+        Schema::dropIfExists('kontaks');
     }
 }

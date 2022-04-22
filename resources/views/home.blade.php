@@ -39,7 +39,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="assets/img/apple-touch-icon.png">Logo</a>
+ <a class="navbar-brand" href="assets/img/apple-touch-icon.png">Logo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -87,7 +87,7 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url(assets/img/skills-img.jpg);background: position 100px; bottom;background: size 100px;contain;margin-top:5.625rem;">
+          <div class="carousel-item active" style="background-image: url(assets/img/background.jpg);background: position; bottom;background: size;contain;margin-top:5.625rem;">
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"> Selamat Datang <span> Di Web Sekolah </span></h2>
@@ -98,10 +98,10 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(assets/img/skills-img.jpg);background: position 100px; bottom;background: size 100px;contain;margin-top:5.625rem;">
+          <div class="carousel-item" style="background-image: url(assets/img/background.jpg);background: position 100px; bottom;background: size 100px;contain;margin-top:5.625rem;">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated fanimate__adeInDown">My <span>School</span></h2>
+                <h2 class="animate__animated fanimate__adeInDown"> Sekolah<span>ku</span></h2>
                 <p class="animate__animated animate__fadeInUp">A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers.</p>
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
               </div>
@@ -185,37 +185,45 @@
         </div>
       </div>
     </section><!-- End Services Section -->
-     <!-- ======= Counts Section ======= -->
-     <section id="counts" class="counts section-bg">
+       <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
       <div class="container">
 
-        <div class="row justify-content-end">
+        <div class="row no-gutters">
 
-          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="1013" data-purecounter-duration="2" class="purecounter"></span>
-              <p>Terdapat Lebih Dari 1,013 Pelajar Aktif</p>
+              <i class="bi bi-mortarboard"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1031" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Pelajar</strong> Lebih dari 1,031 Pelajar Aktif </p>
+              <a href="#">Find out more &raquo;</a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
+              <i class="bi bi-people"></i>
               <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Terdapat Lebih Dari 100 Guru Aktif</p>
+              <p><strong>Guru</strong> Lebih dari 100 guru aktif</p>
+              <a href="#">Find out more &raquo;</a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Terdapat Lebih Dari 45 Staff Dan Karyawan Aktif</p>
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="70" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Staff dan Karyawan</strong> Lebih Dari 70 Staff Dan Karyawan</p>
+              <a href="#">Find out more &raquo;</a>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
+              <i class="bi bi-book"></i>
               <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Terdapat Lebih Dari 15 Mata pelajaran</p>
+              <p><strong>Mata Pelajaran</strong> Lebiih Dari 15 Mata Pelajaran</p>
+              <a href="#">Find out more &raquo;</a>
             </div>
           </div>
 
@@ -235,7 +243,7 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://127.0.0.1:8000/page/tentang">profile</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="guru">tentang guru</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="berita">berita</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="kontak">kontak</a></li>
@@ -279,18 +287,7 @@
       </div>
     </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>BootstrapMade</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+    
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
