@@ -1,117 +1,26 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Database\Factories;
 
-use DB;
-use App\Models\Berita;
-use App\Models\Galeri;
-use App\Models\Komentar;
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-class BeritaController extends Controller
+class BeritaFactory extends Factory
 {
     /**
-     * Display a listing of the resource.
+     * Define the model's default state.
      *
-     * @return \Illuminate\Http\Response
+     * @return array
      */
-    public function index()
+    public function definition()
     {
-        $items = Berita::paginate(6);
-        $News = Berita::latest()->get();
-        $galeris = Galeri::latest()->get();
+        $allowTags = '<a><br></br><p><span><h1><h2><h3><h4><h5><ul><li><ol><b><i><strong><em>';
+        $isi = strip_tags($this->faker->randomHtml(15, 4), $allowTags);
 
-        return view('berita.index', [
-            'items' => $items,
-            'News'  => $News,
-            'galeris'=>$galeris
-            
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */ 
-    public function show($id)
-    {
-        $item = Berita::findOrFail($id);
-        // dd($item);
-        
-        $berita_id = $item->id;
-        // dd($berita_id);
-
-        
-
-        $komen = DB::table('komentars')->where('berita_id', '=' ,$berita_id)->get();
-        // dd($komen);
-     
-        // $komen = Komentar::find($id);
-        // dd($komen);
-
-
-        $beritas = Berita::all();
-        return view('berita.detail', [
-            'item' => $item,
-            'beritas'=>$beritas,
-            'komen'=>$komen
-        ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return [
+            'judul' => $this->faker->text(50),
+            'slug' => $this->faker->text(120),
+            'foto' => 'sample-image/foto-' . $this->faker->numberBetween('1', '6') . '.jpg',
+            'isi' => $isi,
+        ];
     }
 }
