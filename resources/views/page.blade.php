@@ -12,7 +12,7 @@
 @endsection
 
 @push('sidebar')
-<div class="alert alert-primary">News Berita</div>
+<div class="alert alert-warning"> Berita </div>
 <ol class="list-group list-group-numbered">
   @foreach ($beritas->skip(20) as $item)
   <li class="list-group-item d-flex justify-content-between align-items-start">
