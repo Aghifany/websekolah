@@ -32,7 +32,7 @@
 @endsection
 
 @push('sidebar')
-<div class="alert alert-primary mt-2 ml-2">News</div>
+<div class="alert alert-warning mt-2 ml-2">News</div>
 @if ($News->count())
 <div class="list-group">
   <a href="{{ route('berita.show', [

@@ -19,12 +19,12 @@
 @endsection
 
 @push('sidebar')
- <div class="alert alert-primary mt-2 ml-2">Berita Dari Galeri</div>
+ <div class="alert alert-warning mt-2 ml-2">Berita Dari Galeri</div>
  {{-- galeri --}}
   <div class="col">
    @if ($galeris->count())
    <div class="card h-100">
-     <div class="position-absolute bg-orange px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="{{ route('galeri.index') }}" class="text-white text-decoration-none">{{ $galeris[0]->created_at->diffForHumans()  }}</a></div>
+     <div class="position-absolute bg-orange px-3 py-2 " style="background-color: rgb(255, 165, 0)"><a href="{{ route('galeri.index') }}" class="text-white text-decoration-none">{{ $galeris[0]->created_at->diffForHumans()  }}</a></div>
      <img src="{{ asset($galeris[0]->foto) }}" class="card-img-top" alt="...">
      <div class="card-footer">
        <small class="text-center">{{ $galeris[0]->nama }}</small>
@@ -35,7 +35,7 @@
  <div class="col">
   @if ($galeris->count())
   <div class="card h-100">
-    <div class="position-absolute bg-orange px-3 py-2 " style="background-color: rgba(0, 0, 0, 0.7)"><a href="{{ route('galeri.index') }}" class="text-white text-decoration-none">{{ $galeris[1]->created_at->diffForHumans()  }}</a></div>
+    <div class="position-absolute bg-orange px-3 py-2 " style="background-color: rgb(255, 165, 0)"><a href="{{ route('galeri.index') }}" class="text-white text-decoration-none">{{ $galeris[1]->created_at->diffForHumans()  }}</a></div>
     <img src="{{ asset($galeris[1]->foto) }}" class="card-img-top" alt="...">
     <div class="card-footer">
       <small class="text-center">{{ $galeris[1]->nama }}</small>
