@@ -65,7 +65,7 @@
           <label for="exampleFormControlTextarea1" class="form-label">Komentar</label>
           <textarea class="form-control" name="komentar" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">kirim</button>
+        <button type="submit" class="btn btn-warning">kirim</button>
     </form>
     </div>
   </div>
@@ -73,7 +73,7 @@
 @endsection
 
 @push('sidebar')
-<div class="alert alert-primary">Berita Lainnya</div>
+<div class="alert alert-warning">Berita Lainnya</div>
 <ol class="list-group list-group-numbered">
   @foreach ($beritas->skip(15) as $item)
   <li class="list-group-item d-flex justify-content-between align-items-start">
