@@ -19,7 +19,7 @@
 @endsection
 
 @push('sidebar')
- <div class="alert alert-primary mt-2 ml-2">News From Galeri</div>
+ <div class="alert alert-primary mt-2 ml-2">Berita Dari Galeri</div>
  {{-- galeri --}}
   <div class="col">
    @if ($galeris->count())
